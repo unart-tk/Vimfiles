@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+  <link rel="Stylesheet" type="text/css" href="script.php_files/style.css">
+  <title>localvimrc - load subdirectory specific vimrc files : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="http://www.vim.org/images/vim_shortcut.ico">
+</head><body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table cellpadding="0" cellspacing="0" width="100%" border="0" bordercolor="red">
+  <tbody><tr>
+    <td colspan="4" class="lightbg"><img src="script.php_files/spacer.gif" alt="" height="5" width="1"></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="http://www.vim.org/sponsor/index.php"><img src="script.php_files/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="http://www.vim.org/index.php"><img src="script.php_files/vim_header.gif" alt="Vim logo" border="0"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="script.php_files/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="script.php_files/spacer.gif" alt="" height="5" width="1"></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="script.php_files/spacer.gif" alt="" height="10" width="1"></td>
+  </tr>
+</tbody></table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" width="100%" border="0">
+  <col width="180">
+  <col width="1">
+
+  <tbody><tr valign="top">
+    <td class="sidebar">
+      <table cellpadding="4" cellspacing="0" width="180" border="0">
+        <tbody><tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table cellpadding="0" cellspacing="0" width="100%" border="0" bordercolor="red">
+    <tbody><tr>
+        <td><small>not logged in (<a href="http://www.vim.org/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" type="hidden">
+    <input name="ie" value="ISO-8859-1" type="hidden">
+    <input style="background: url(&quot;http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);" name="q" size="20" type="text">
+    <br>
+    <input name="sa" value="Search" type="submit">
+  </div>
+<input value="www.vim.org/scripts/script.php?script_id=441" name="siteurl" type="hidden"></form>
+<script type="text/javascript" src="script.php_files/brand"></script>
+    </td></tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="1" width="1" border="0"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="script.php_files/spacer.gif" alt="" height="3" border="0"></td>
+    </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="2" width="1" border="0"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="7" width="1" border="0"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="script.php_files/spacer.gif" alt="" height="1" border="0"></td>
+    </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="7" width="1" border="0"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="7" width="1" border="0"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="script.php_files/spacer.gif" alt="" height="1" border="0"></td>
+    </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="7" width="1" border="0"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="7" width="1" border="0"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="script.php_files/spacer.gif" alt="" height="1" border="0"></td>
+    </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="7" width="1" border="0"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/huh.php">Site Help</a></td>
+        </tr>
+</tbody></table>
+
+            <table cellpadding="0" cellspacing="0" width="172" border="0">
+              <tbody><tr><td><img src="script.php_files/spacer.gif" alt="" height="8" width="1" border="0"></td></tr>
+              <tr><td class="darkbg"><img src="script.php_files/spacer.gif" alt="" height="3" width="1"></td></tr>
+            </tbody></table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+
+    <td class="darkbg"><img src="script.php_files/spacer.gif" alt="" height="1" width="1" border="0"><br></td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0" bordercolor="red">
+        <tbody><tr>
+          <td valign="top">
+
+<span class="txth1">localvimrc : load subdirectory specific vimrc files</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tbody><tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>104/38</b>,
+    Downloaded by 1492  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:441">Vim wiki</a>
+  </td>  
+</tr>
+</tbody></table>
+<p>
+
+<table cellpadding="0" cellspacing="0" border="0">
+<tbody><tr><td class="prompt">created by</td></tr>
+<tr><td><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Sometimes, when you work on different projects, you have the 
+problem, that they use different indentation, tab expansion and so on. 
+You need vimrc for each project that overrides your prefered settings 
+from ~/.vimrc
+<br>
+<br>This plugin searches for local vimrc files in the filesystem tree of
+ the currently opened file. By default it searches for all ".lvimrc" 
+files from the file's directory up to the root directory and loads them 
+in reverse order. The filename and amount of loaded files is 
+customizable through global variables.
+<br>
+<br>Variables:
+<br>
+<br>g:localvimrc_name
+<br>&nbsp;&nbsp;Filename of local vimrc files. Defaults to ".lvimrc".
+<br>
+<br>g:localvimrc_count
+<br>&nbsp;&nbsp;On the way from root, the last localvimrc_count files are sourced. Defaults to -1 (all)
+<br>
+<br>g:localvimrc_sandbox
+<br>&nbsp;&nbsp;Source the found local vimrc files in a sandbox for security reasons. Defaults to 1.
+<br>
+<br>g:localvimrc_ask
+<br>&nbsp;&nbsp;Ask before sourcing any local vimrc file. Defaults to 1.
+<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Copy the localvimrc.vim script to the .vim/plugin directory.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</tbody></table>
+
+<!-- rating table -->
+</p><form name="rating">
+<input name="script_id" value="441" type="hidden">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tbody><tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input name="rating" value="life_changing" type="radio">Life Changing
+    <input name="rating" value="helpful" type="radio">Helpful
+    <input name="rating" value="unfulfilling" type="radio">Unfulfilling&nbsp;
+    <input value="rate" type="submit">
+  </td>
+</tr>
+</tbody></table>
+</form>
+<span class="txth2">script versions</span> (<a href="http://www.vim.org/scripts/add_script_version.php?script_id=441">upload new version</a>)
+<p>
+Click on the package to download.
+</p><p>
+
+<table cellpadding="4" cellspacing="2" width="100%" border="0">
+<tbody><tr class="tableheader">
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=10578">localvimrc.vim</a></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><b>2758</b></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><i>2009-05-11</i></td>
+    <td class="rowodd" nowrap="nowrap" valign="top">7.0</td>
+    <td class="rowodd" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- source .lvimrc in a sandbox to better maintain security, configurable using g:localvimrc_sandbox 
+<br>- ask user before sourcing any local vimrc file, configurable using g:localvimrc_ask&nbsp;&nbsp;
+<br></td>
+</tr>
+<tr>
+        <td class="roweven" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=7726">localvimrc.vim</a></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><b>1870</b></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><i>2007-09-28</i></td>
+    <td class="roweven" nowrap="nowrap" valign="top">7.0</td>
+    <td class="roweven" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="roweven" valign="top" width="2000">- new configuration variable g:localvimrc_name to change filename
+<br>- new configuration variable g:localvimrc_count to limit number of loaded files</td>
+</tr>
+<tr>
+        <td class="rowodd" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=6948">localvimrc.vim</a></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><b>1613</b></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><i>2007-04-05</i></td>
+    <td class="rowodd" nowrap="nowrap" valign="top">7.0</td>
+    <td class="rowodd" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- switched to arrays in vim 7
+<br>- escape file/path names correctly</td>
+</tr>
+<tr>
+        <td class="roweven" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=1288">localvimrc.vim</a></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><b>1.2</b></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><i>2002-10-09</i></td>
+    <td class="roweven" nowrap="nowrap" valign="top">6.0</td>
+    <td class="roweven" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</tbody></table>
+<!-- finish off the framework -->
+          </p></td>
+        </tr>
+      </tbody></table>
+    </td>
+
+  </tr>
+</tbody></table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" width="100%" border="0" bordercolor="red">
+  <tbody><tr><td colspan="4"><img src="script.php_files/spacer.gif" alt="" height="5" width="1"></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="script.php_files/spacer.gif" alt="" height="2" width="1"></td></tr>
+  <tr><td colspan="4"><img src="script.php_files/spacer.gif" alt="" height="5" width="1"></td></tr>
+  <tr>
+    <td><img src="script.php_files/spacer.gif" alt="" height="1" width="5"></td>
+
+    <td valign="top" align="left"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net/">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="script.php_files/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td valign="top" align="right">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="script.php_files/sflogo.png" alt="SourceForge.net Logo" height="31" width="88" border="0"></a>
+    </td>
+
+    <td><img src="script.php_files/spacer.gif" alt="" height="1" width="5"></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="script.php_files/spacer.gif" alt="" height="5" width="1"></td>
+  
+  </tr>
+</tbody></table>
+
+</body></html>

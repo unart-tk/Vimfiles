@@ -1,0 +1,12 @@
+Title
+=====
+
+    Copyright (C) [:VIM_EVAL:]strftime('%Y')[:END_EVAL:] Ben
+    [:VIM_EVAL:]strftime('%Y-%m-%d')[:END_EVAL:] / untar.org
+    tag,
+
+Abstract
+
+---
+
+

@@ -1,0 +1,470 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+  <link rel="Stylesheet" type="text/css" href="script.php_files/style.css">
+  <title>gnupg - Plugin for transparent editing of gpg encrypted files. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="http://www.vim.org/images/vim_shortcut.ico">
+</head><body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table cellpadding="0" cellspacing="0" width="100%" border="0" bordercolor="red">
+  <tbody><tr>
+    <td colspan="4" class="lightbg"><img src="script.php_files/spacer.gif" alt="" height="5" width="1"></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="http://www.vim.org/sponsor/index.php"><img src="script.php_files/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="http://www.vim.org/index.php"><img src="script.php_files/vim_header.gif" alt="Vim logo" border="0"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="script.php_files/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="script.php_files/spacer.gif" alt="" height="5" width="1"></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="script.php_files/spacer.gif" alt="" height="10" width="1"></td>
+  </tr>
+</tbody></table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" width="100%" border="0">
+  <col width="180">
+  <col width="1">
+
+  <tbody><tr valign="top">
+    <td class="sidebar">
+      <table cellpadding="4" cellspacing="0" width="180" border="0">
+        <tbody><tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table cellpadding="0" cellspacing="0" width="100%" border="0" bordercolor="red">
+    <tbody><tr>
+        <td><small>not logged in (<a href="http://www.vim.org/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" type="hidden">
+    <input name="ie" value="ISO-8859-1" type="hidden">
+    <input style="background: url(&quot;http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);" name="q" size="20" type="text">
+    <br>
+    <input name="sa" value="Search" type="submit">
+  </div>
+<input value="www.vim.org/scripts/script.php?script_id=661" name="siteurl" type="hidden"></form>
+<script type="text/javascript" src="script.php_files/brand"></script>
+    </td></tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="1" width="1" border="0"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="script.php_files/spacer.gif" alt="" height="3" border="0"></td>
+    </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="2" width="1" border="0"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="7" width="1" border="0"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="script.php_files/spacer.gif" alt="" height="1" border="0"></td>
+    </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="7" width="1" border="0"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="7" width="1" border="0"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="script.php_files/spacer.gif" alt="" height="1" border="0"></td>
+    </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="7" width="1" border="0"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="7" width="1" border="0"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="script.php_files/spacer.gif" alt="" height="1" border="0"></td>
+    </tr>
+    <tr>
+        <td><img src="script.php_files/spacer.gif" alt="" height="7" width="1" border="0"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="http://www.vim.org/huh.php">Site Help</a></td>
+        </tr>
+</tbody></table>
+
+            <table cellpadding="0" cellspacing="0" width="172" border="0">
+              <tbody><tr><td><img src="script.php_files/spacer.gif" alt="" height="8" width="1" border="0"></td></tr>
+              <tr><td class="darkbg"><img src="script.php_files/spacer.gif" alt="" height="3" width="1"></td></tr>
+            </tbody></table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+
+    <td class="darkbg"><img src="script.php_files/spacer.gif" alt="" height="1" width="1" border="0"><br></td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0" bordercolor="red">
+        <tbody><tr>
+          <td valign="top">
+
+<span class="txth1">gnupg : Plugin for transparent editing of gpg encrypted files.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tbody><tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>1128/398</b>,
+    Downloaded by 9621  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:661">Vim wiki</a>
+  </td>  
+</tr>
+</tbody></table>
+<p>
+
+<table cellpadding="0" cellspacing="0" border="0">
+<tbody><tr><td class="prompt">created by</td></tr>
+<tr><td><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This script implements transparent editing of gpg encrypted 
+files. The filename must have a ".gpg", ".pgp" or ".asc" suffix. When 
+opening such a file the content is decrypted, when opening a new file 
+the script will ask for the recipients of the encrypted file. The file 
+content will be encrypted to all recipients before it is written. The 
+script turns off viminfo and swapfile to increase security.
+<br>
+<br>Commands:
+<br>
+<br>&nbsp;&nbsp;:GPGEditRecipients
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Opens a scratch buffer to change the list of recipients. Recipients that
+<br>&nbsp;&nbsp;&nbsp;&nbsp;are unknown (not in your public key) are highlighted and have
+<br>&nbsp;&nbsp;&nbsp;&nbsp;a prepended "!". Closing the buffer makes the changes permanent.
+<br>
+<br>&nbsp;&nbsp;:GPGViewRecipients
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Prints the list of recipients.
+<br>
+<br>&nbsp;&nbsp;:GPGEditOptions
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Opens a scratch buffer to change the options for encryption (symmetric,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;asymmetric, signing). Closing the buffer makes the changes permanent.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;WARNING: There is no check of the entered options, so you need to know
+<br>&nbsp;&nbsp;&nbsp;&nbsp;what you are doing.
+<br>
+<br>&nbsp;&nbsp;:GPGViewOptions
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Prints the list of options.
+<br>
+<br>Variables:
+<br>
+<br>&nbsp;&nbsp;g:GPGExecutable
+<br>&nbsp;&nbsp;&nbsp;&nbsp;If set used as gpg executable, otherwise the system chooses what is run
+<br>&nbsp;&nbsp;&nbsp;&nbsp;when "gpg" is called. Defaults to "gpg".
+<br>
+<br>&nbsp;&nbsp;g:GPGUseAgent
+<br>&nbsp;&nbsp;&nbsp;&nbsp;If set to 0 a possible available gpg-agent won't be used. Defaults to 1.
+<br>
+<br>&nbsp;&nbsp;g:GPGPreferSymmetric
+<br>&nbsp;&nbsp;&nbsp;&nbsp;If set to 1 symmetric encryption is preferred for new files. Defaults to 0.
+<br>
+<br>&nbsp;&nbsp;g:GPGPreferArmor
+<br>&nbsp;&nbsp;&nbsp;&nbsp;If set to 1 armored data is preferred for new files. Defaults to 0.
+<br>
+<br>&nbsp;&nbsp;g:GPGPreferSign
+<br>&nbsp;&nbsp;&nbsp;&nbsp;If set to 1 signed data is preferred for new files. Defaults to 0.
+<br>
+<br>&nbsp;&nbsp;g:GPGDefaultRecipients
+<br>&nbsp;&nbsp;&nbsp;&nbsp;If set, these recipients are used as defaults when no other recipient is
+<br>&nbsp;&nbsp;&nbsp;&nbsp;defined. This variable is a Vim list. Default is unset.
+<br>
+<br>Known Issues:
+<br>
+<br>&nbsp;&nbsp;In some cases gvim can't decryt files
+<br>
+<br>&nbsp;&nbsp;This is caused by the fact that a running gvim has no TTY and thus gpg is
+<br>&nbsp;&nbsp;not able to ask for the passphrase by itself. This is a problem for Windows
+<br>&nbsp;&nbsp;and Linux versions of gvim and could not be solved unless a "terminal
+<br>&nbsp;&nbsp;emulation" is implemented for gvim. To circumvent this you have to use any
+<br>&nbsp;&nbsp;combination of gpg-agent and a graphical pinentry program:
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;- gpg-agent only:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you need to provide the passphrase for the needed key to gpg-agent
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in a terminal before you open files with gvim which require this key.
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;- pinentry only:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you will get a popup window every time you open a file that needs to
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;be decrypted.
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;- gpgagent and pinentry:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you will get a popup window the first time you open a file that
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;needs to be decrypted.
+<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Copy the gnupg.vim file to the $HOME/.vim/plugin directory. 
+Refer to ':help add-plugin', ':help add-global-plugin' and ':help 
+runtimepath' for more details about Vim plugins.
+<br>
+<br>From "man 1 gpg-agent":
+<br>...
+<br>You should always add the following lines to your .bashrc or whatever initialization file is used for all shell invocations:
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp; GPG_TTY=`tty`
+<br>&nbsp;&nbsp;&nbsp;&nbsp; export GPG_TTY
+<br>
+<br>It is important that this environment variable always reflects the 
+output of the tty command. For W32 systems this option is not required.
+<br>...
+<br>
+<br>Most distributions provide software to ease handling of gpg and gpg-agent. Examples are keychain or seahorse.
+<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</tbody></table>
+
+<!-- rating table -->
+</p><form name="rating">
+<input name="script_id" value="661" type="hidden">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tbody><tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input name="rating" value="life_changing" type="radio">Life Changing
+    <input name="rating" value="helpful" type="radio">Helpful
+    <input name="rating" value="unfulfilling" type="radio">Unfulfilling&nbsp;
+    <input value="rate" type="submit">
+  </td>
+</tr>
+</tbody></table>
+</form>
+<span class="txth2">script versions</span> (<a href="http://www.vim.org/scripts/add_script_version.php?script_id=661">upload new version</a>)
+<p>
+Click on the package to download.
+</p><p>
+
+<table cellpadding="4" cellspacing="2" width="100%" border="0">
+<tbody><tr class="tableheader">
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=12200">gnupg.vim</a></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><b>3026</b></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><i>2010-01-27</i></td>
+    <td class="rowodd" nowrap="nowrap" valign="top">7.0</td>
+    <td class="rowodd" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- fix a bug by using a 
+sh compatible setting for 'shellredir' on unix systems. when 'shell' was
+ set to csh or tcsh by the user and the system has /bin/sh linked to 
+dash the plugin didn't work.
+<br></td>
+</tr>
+<tr>
+        <td class="roweven" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=10833">gnupg.vim</a></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><b>2782</b></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><i>2009-06-15</i></td>
+    <td class="roweven" nowrap="nowrap" valign="top">7.0</td>
+    <td class="roweven" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="roweven" valign="top" width="2000">- show more 
+information (key id and creation time) of keys in GPGEditRecipients, 
+GPGViewRecipients and during selecting in case of a ambiguous key.
+<br></td>
+</tr>
+<tr>
+        <td class="rowodd" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=10683">gnupg.vim</a></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><b>2773</b></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><i>2009-05-27</i></td>
+    <td class="rowodd" nowrap="nowrap" valign="top">7.0</td>
+    <td class="rowodd" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- fix a bug in detecting windows platforms
+<br>- added g:GPGPreferSign to sign encrypted files by default (thanks to Tim Swast).
+<br></td>
+</tr>
+<tr>
+        <td class="roweven" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=9142">gnupg.vim</a></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><b>2276</b></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><i>2008-08-18</i></td>
+    <td class="roweven" nowrap="nowrap" valign="top">7.0</td>
+    <td class="roweven" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="roweven" valign="top" width="2000">- added support for default recipients via the variable g:GPGDefaultRecipients.
+<br>- fixed an wrong error message with symmetric encryption and set recipients (thanks to Sebastian Luettich).
+<br>- create a empty new buffer on leaving vim to wipe out sensitive data on console.
+<br>- make sure senisitive data is never written unencrypted to disk.</td>
+</tr>
+<tr>
+        <td class="rowodd" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=9058">gnupg.vim</a></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><b>2249</b></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><i>2008-07-31</i></td>
+    <td class="rowodd" nowrap="nowrap" valign="top">7.0</td>
+    <td class="rowodd" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- rewritten lots of code to use lists feature of vim 7 instead of my own implementation
+<br>- added a n option to change the name and location of GPG executable
+<br>- try to get GPG_TTY dynamically.</td>
+</tr>
+<tr>
+        <td class="roweven" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=8174">gnupg.vim</a></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><b>1933</b></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><i>2008-01-23</i></td>
+    <td class="roweven" nowrap="nowrap" valign="top">6.0</td>
+    <td class="roweven" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="roweven" valign="top" width="2000">- changed parsin to work with gpg2 correctly
+<br>- save/restore view of saved window
+<br>- fix a bug when encoding and fileencoding is different
+<br>- restructured autocommand triggers
+<br>- added a debug command and debug messages</td>
+</tr>
+<tr>
+        <td class="rowodd" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=6949">gnupg.vim</a></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><b>1605</b></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><i>2007-04-05</i></td>
+    <td class="rowodd" nowrap="nowrap" valign="top">6.0</td>
+    <td class="rowodd" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- new plugin options to set preferences for symmetric/asymmetric and armor/binary files
+<br>- fix for use with gvim. !! plugin works only in gvim if gpg-agent is available !!</td>
+</tr>
+<tr>
+        <td class="roweven" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=6518">gnupg.vim</a></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><b>1472</b></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><i>2006-12-15</i></td>
+    <td class="roweven" nowrap="nowrap" valign="top">6.0</td>
+    <td class="roweven" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="roweven" valign="top" width="2000">- support for symmetric encrypted files.
+<br>- detection of various encryption options.
+<br>- possibility to change gpg options using new commands GPGEditOptions and GPGViewOptions commands.
+<br>- support editing files with '.gpg', '.pgp' and '.asc' suffixes (tanks to Richard Bronosky).
+<br>- detection of unencrypted files.
+<br>- support for windows systems (thanks to Erik Remmelzwaal).</td>
+</tr>
+<tr>
+        <td class="rowodd" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=2108">gnupg.vim</a></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><b>1.27</b></td>
+    <td class="rowodd" nowrap="nowrap" valign="top"><i>2003-06-24</i></td>
+    <td class="rowodd" nowrap="nowrap" valign="top">6.0</td>
+    <td class="rowodd" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="rowodd" valign="top" width="2000">updated documentation, that gnupg.vim only works for public/private-key encrypted files.</td>
+</tr>
+<tr>
+        <td class="roweven" nowrap="nowrap" valign="top"><a href="http://www.vim.org/scripts/download_script.php?src_id=2029">gnupg.vim</a></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><b>1.26</b></td>
+    <td class="roweven" nowrap="nowrap" valign="top"><i>2003-05-30</i></td>
+    <td class="roweven" nowrap="nowrap" valign="top">6.0</td>
+    <td class="roweven" valign="top"><i><a href="http://www.vim.org/account/profile.php?user_id=1120">Markus Braun</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</tbody></table>
+<!-- finish off the framework -->
+          </p></td>
+        </tr>
+      </tbody></table>
+    </td>
+
+  </tr>
+</tbody></table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" width="100%" border="0" bordercolor="red">
+  <tbody><tr><td colspan="4"><img src="script.php_files/spacer.gif" alt="" height="5" width="1"></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="script.php_files/spacer.gif" alt="" height="2" width="1"></td></tr>
+  <tr><td colspan="4"><img src="script.php_files/spacer.gif" alt="" height="5" width="1"></td></tr>
+  <tr>
+    <td><img src="script.php_files/spacer.gif" alt="" height="1" width="5"></td>
+
+    <td valign="top" align="left"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net/">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="script.php_files/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td valign="top" align="right">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="script.php_files/sflogo.png" alt="SourceForge.net Logo" height="31" width="88" border="0"></a>
+    </td>
+
+    <td><img src="script.php_files/spacer.gif" alt="" height="1" width="5"></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="script.php_files/spacer.gif" alt="" height="5" width="1"></td>
+  
+  </tr>
+</tbody></table>
+
+</body></html>
